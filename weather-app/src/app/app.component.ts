@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  pageItem: string = 'current';
   // title = 'weather-app';
+  pageDisplay(item: string){
+    this.pageItem = item;
+
+  }
 }

@@ -1,23 +1,20 @@
-<app-header></app-header>
+<app-header 
+(feature)="pageDisplay($event)"></app-header>
 <br>
 <div class="container">
     <div class="row">
-        <div class="col-md-8" style="background-color: crimson;">
+        <div class="col-sm-8">
             <app-user-data></app-user-data>
         </div>
     </div>
     <hr>
     <h6>This is the body of the weather app.</h6>
-    <hr>
     <div class="row">
-        <div class="col-md-12" style="background-color: burlywood;">
-            <app-display></app-display>
-        </div>
-    </div>
-    <hr>
-    <div class="row">
-        <div class="col-md-12" style="background-color: aqua;">
-            <app-analysis></app-analysis>
+        <div class="col-md-12">
+            <app-display
+            *ngIf="pageItem === 'current'"></app-display>
+            <app-analysis
+            *ngIf="pageItem === 'past'"></app-analysis>
         </div>
     </div>
 </div>
